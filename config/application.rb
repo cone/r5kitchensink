@@ -16,6 +16,8 @@ module R5kitchensink
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.eager_load_paths << Rails.root.join('lib')
+
     console do
       require 'r5kitchensink/my_console'
       Rails::ConsoleMethods.send :include, R5kitchensink::MyConsole

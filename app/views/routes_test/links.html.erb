@@ -1,0 +1,16 @@
+<ul>
+  <li><%= link_to 'Test', route_test_path %></li>
+  <li><%= link_to 'Proc test', route_test_proc_path %></li>
+  <!-- Doesn't work as espected, it creates /route-test?id=1 -->
+  <li><%= link_to 'Test show with id', route_test_path(id: 1) %></li>
+  <!-- Now it works as expected, it creates /route-test-named/1 -->
+  <li><%= link_to 'Test show with id named', rtn_path(id: 1) %></li>
+  <!-- Passing an object (shouldn't be done in the view, but just for the sake of demostrating) -->
+  <li><%= link_to 'Test show dummy passing an acive record object', dummy_path(Dummy.first) %></li>
+  <!-- Creating a route of an association -->
+  <% dummy = Dummy.first; test = dummy.tests.first %>
+  <li><%= link_to 'Test show the test of a dummy', test_path(dummy, test) %></li>
+  <li><%= link_to 'Testing scoped named routes', routing_all_path %></li>
+  <!-- Testing the directed route -->
+  <li><%= link_to 'Directed route', directed_route_url %>
+</ul>
