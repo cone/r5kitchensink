@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # Creates all restful routes and enables <name>_path, <name>_url helpers
+  resources :products
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Simple examples
