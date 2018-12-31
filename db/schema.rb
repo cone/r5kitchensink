@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_24_164358) do
+ActiveRecord::Schema.define(version: 2018_12_31_231434) do
+
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dummies", force: :cascade do |t|
     t.string "name"
@@ -23,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_12_24_164358) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_products_on_brand_id"
   end
 
   create_table "tests", force: :cascade do |t|

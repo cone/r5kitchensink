@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # Creates nested resources e.g. brands/1/products/4, and helpers like brands_products_path
+  resources :brands do
+    resources :products
+  end
+
+  # - The 'shallow' parameter only generates nested routes for 'index', 'create' and 'new' actions
+  # resources :brands do, shallow: true
+    # resources :products
+  # end
+
   # Creates all restful routes and enables <name>_path, <name>_url helpers
   resources :products
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

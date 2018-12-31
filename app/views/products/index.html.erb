@@ -6,6 +6,11 @@
       <%= link_to product.name, product %>, <%= product.description %>,
       <%= link_to 'Edit', edit_product_path(product) %>,
       <%= link_to 'Delete', product, method: :delete %>
+      <% if product.brand %>
+        <%= link_to 'Brand\'s product', brand_product_path(product.brand, product) %>
+      <% end %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to 'Brand products', brand_products_path(Brand.first) %>
