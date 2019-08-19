@@ -1,7 +1,44 @@
 # README
 
+Rack
+----
+
+Run `rake middleware` to see all rack filters.
+
+Option for adding a new filter:
+```
+• config.middleware.insert_after(existing_middleware, new_middleware, args)—Adds the new middleware after the specified existing middleware in the middleware stack.
+
+• config.middleware.insert_before(existing_middleware, new_middleware, args)—Adds the new middleware before the specified existing middleware in the middleware stack.
+
+• config.middleware.delete(middleware)—Removes a specified middleware from the stack.
+
+• config.middleware.swap(existing_middleware, new_middleware, args)—Swaps a specified middleware from the stack with a new class.
+
+• config.middleware.use(new_middleware, args)—Takes a class reference as its parameter and just adds the desired middleware to the end of the middleware stack.
+```
+
+Make a request manually from Rails console:
+
+```
+>> env = {}
+>> env['REMOTE_ADDR'] = '127.0.0.1'
+>> env['REQUEST_METHOD'] = 'GET'
+>> env['PATH_INFO'] = '/products/1'
+>> env['rack.input'] = StringIO.new
+>> rack_body_proxy = R5kitchensink::Application.call(env).last
+>> rack_body_proxy.last
+```
+
+Format response as YAML:
+
+```
+>> y R5kitchensink::Application.call(env)
+```
+
 Misc
 ----
+
 [Include custom helper for using in console mode](https://github.com/cone/r5kitchensink/commit/11ea4cb1127325ba69ad63124b2cf754deebe8a5)
 
 [Redirecting console output to STDOUT](https://github.com/cone/r5kitchensink/commit/59ac384a081139ccfcc64dad18a97ea9f1b75318)
