@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # -------- Concerns ---------
+    # concern :commentable do
+      # resources :comments
+    # end
+    
+    # concern :image_attachable do
+      # resources :image_attachments, only: :index
+    # end
+
+    # resources :auctions, concerns: [:commentable, :image_attachable] do
+      # resources :bids
+    # end
+
+    # resources :bids, concerns: :commentable
+  #----------------------------
+
+
   # Creates nested resources e.g. brands/1/products/4, and helpers like brands_products_path
   resources :brands do
     resources :products
