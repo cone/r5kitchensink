@@ -158,6 +158,15 @@ Rails.application.routes.draw do
   # Direct routes
   direct(:directed_route) { 'http://www.google.com' }
 
+  # Try routes /rep_of_resources/respond-to-method.html and /rep_of_resources/respond-to-method.xml
+  namespace :rep_of_resources do
+    get 'respond-to-method' => :respond_to_method
+  end
+  # Can also be
+  #scope controller: :rep_of_resources do
+    #get 'rep_of_resource/respond-to-method' => :respond_to_method
+  #end
+
   # List all routes with: 'rails routes'
   # List show routes of a specific controller with: 'rails routes -c routes_test'
 end

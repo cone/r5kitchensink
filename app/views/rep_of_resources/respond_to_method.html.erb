@@ -1,0 +1,6 @@
+<% @p.each do |prod| %>
+    Product name: <%= prod.name %>
+<% end %>
+
+<%= link_to 'XML version', rep_of_resources_respond_to_method_path(:xml) %>
+# can also be something like: product_path(id, :xml) if the id needs to be passed
