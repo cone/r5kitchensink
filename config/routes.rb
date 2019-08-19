@@ -55,6 +55,14 @@ Rails.application.routes.draw do
   # Mapping to a different controller
   # resources :products, controller: "productos"
 
+  # Enables methods for new resources, this example creates:
+  # preview_new_product GET    /products/new/preview(.:format) products#preview
+  # resources :products do
+  #   new do
+  #     get :preview
+  #   end
+  # end
+
   # Simple examples
   get 'route-test' => 'routes_test#index'
   get 'route-test/:id' => 'routes_test#show'
