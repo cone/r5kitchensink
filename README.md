@@ -1,5 +1,11 @@
 # README
 
+Misc
+----
+[Include custom helper for using in console mode](https://github.com/cone/r5kitchensink/commit/11ea4cb1127325ba69ad63124b2cf754deebe8a5)
+
+[Redirecting console output to STDOUT](https://github.com/cone/r5kitchensink/commit/59ac384a081139ccfcc64dad18a97ea9f1b75318)
+
 Routing and resources
 ----
 
