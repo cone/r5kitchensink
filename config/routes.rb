@@ -52,6 +52,9 @@ Rails.application.routes.draw do
   # /products/nuevo and /products/cambiar
   # resources :products, path_names: { new: 'nuevo', edit: 'cambiar' }
 
+  # Mapping to a different controller
+  # resources :products, controller: "productos"
+
   # Simple examples
   get 'route-test' => 'routes_test#index'
   get 'route-test/:id' => 'routes_test#show'
