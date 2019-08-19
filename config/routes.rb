@@ -48,6 +48,10 @@ Rails.application.routes.draw do
   resources :products
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  # Changes the default name of the 'new' and 'edit' actions, so they can be used as
+  # /products/nuevo and /products/cambiar
+  # resources :products, path_names: { new: 'nuevo', edit: 'cambiar' }
+
   # Simple examples
   get 'route-test' => 'routes_test#index'
   get 'route-test/:id' => 'routes_test#show'
