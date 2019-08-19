@@ -26,6 +26,16 @@ Rails.application.routes.draw do
       end
       # For several http methods and avoding the block:
       # match :detail, via: [:get, :post], on: :member
+
+      # Will create route detail_brand_products method which creates the route
+      # /brands/:brand_id/products/detail which maps to the same 'detail' method of the
+      # products controller, that is useful in case I want to do an action for all the
+      # products, for instance, see the detail of all or updating en masse
+      collection do
+        match :detail, via: [:get, :post]
+      end
+      # also can be
+      # match :terminate, via: [:get, :post], on: :collection
     end
   end
 
