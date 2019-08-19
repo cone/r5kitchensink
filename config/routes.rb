@@ -167,6 +167,8 @@ Rails.application.routes.draw do
     #get 'rep_of_resource/respond-to-method' => :respond_to_method
   #end
 
+  get 'controller-test/render' => 'routes_test#reder_test'
+
   # List all routes with: 'rails routes'
   # List show routes of a specific controller with: 'rails routes -c routes_test'
 end

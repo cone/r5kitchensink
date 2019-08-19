@@ -45,4 +45,9 @@ class RoutesTestController < ApplicationController
     @test = Dummy.find(params[:id]).tests.where(id: 1)
     render plain: "this is route_test#show_dummy_test, the test name is = #{test.name}"
   end
+
+  def reder_test
+    # rendering other view
+    render 'routes_test/links'
+  end
 end
