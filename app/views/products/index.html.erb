@@ -8,6 +8,7 @@
       <%= link_to 'Delete', product, method: :delete %>
       <% if product.brand %>
         <%= link_to 'Brand\'s product', brand_product_path(product.brand, product) %>
+        <%= link_to 'Product detail', detail_brand_product_path(product.brand, product) %>
       <% end %>
     </li>
   <% end %>

@@ -17,8 +17,16 @@ Rails.application.routes.draw do
 
 
   # Creates nested resources e.g. brands/1/products/4, and helpers like brands_products_path
+  # With the adition of member the helper method ends up as detail_brand_product[_path|_url]
+  # and creates route /brands/1/products/1/detail (GET, but can be any HTTP method)
   resources :brands do
-    resources :products
+    resources :products do
+      member do
+        get :detail
+      end
+      # For several http methods and avoding the block:
+      # match :detail, via: [:get, :post], on: :member
+    end
   end
 
   # - The 'shallow' parameter only generates nested routes for 'index', 'create' and 'new' actions
