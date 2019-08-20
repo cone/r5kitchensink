@@ -169,6 +169,7 @@ Rails.application.routes.draw do
 
   get 'controller-test/render' => 'routes_test#render_test'
   get 'controller-test/redirect' => 'routes_test#redirect_test'
+  get 'controller-test/helpers' => 'routes_test#helpers_test'
 
   # List all routes with: 'rails routes'
   # List show routes of a specific controller with: 'rails routes -c routes_test'

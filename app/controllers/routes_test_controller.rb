@@ -82,4 +82,8 @@ class RoutesTestController < ApplicationController
   def redirect_test
     redirect_to controller_test_render_path, notice: "redirected from redirect_test"
   end
+
+  def helpers_test
+    render plain: helpers.say_hello
+  end
 end
