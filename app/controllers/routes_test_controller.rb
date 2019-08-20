@@ -90,6 +90,11 @@ class RoutesTestController < ApplicationController
     # render json: @record, callback: 'updateRecordsDisplay' # calling a callback when using JSONP
     # render xml: @record
     # render xml: @projects, include: :tasks
+
+    # - Rendering nothing
+    # head :ok
+    # head :unauthorized
+    # head :created, location: auction_path(@auction) # (201 and location header)
   end
 
   def redirect_test
