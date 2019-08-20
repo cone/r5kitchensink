@@ -1,6 +1,7 @@
 # Generated with rails g controller RoutesTest --no-helper --no-assets --no-template-engine
 class RoutesTestController < ApplicationController
   attr_accessor :dummy, :test
+  layout "custom", only: [:render_test, :show] # can also be "except:"
 
   def index
     render plain: 'this is route_test#index'
