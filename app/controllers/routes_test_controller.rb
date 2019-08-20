@@ -77,6 +77,10 @@ class RoutesTestController < ApplicationController
     # - Rendering inline template (For when the code is too small to put it in a separate template)
     # - Whe can specify how the code will be threated (e.g. 'haml')
     # render inline: "%span.foo #{@foo.name}", type: "haml"
+
+    # - Need to disable forgery protection on this action to permit 
+    # - cross-origin JavaScript embedding.
+    # render js: "alert('Hello world!')"
   end
 
   def redirect_test
