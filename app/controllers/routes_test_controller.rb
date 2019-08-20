@@ -46,8 +46,12 @@ class RoutesTestController < ApplicationController
     render plain: "this is route_test#show_dummy_test, the test name is = #{test.name}"
   end
 
-  def reder_test
+  def render_test
     # rendering other view
     render 'routes_test/links'
+  end
+
+  def redirect_test
+    redirect_to controller_test_render_path, notice: "redirected from redirect_test"
   end
 end
