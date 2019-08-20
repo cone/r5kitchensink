@@ -48,7 +48,20 @@ class RoutesTestController < ApplicationController
 
   def render_test
     # rendering other view
-    render 'routes_test/links'
+    # render 'routes_test/links'
+
+    # rendering other template
+    @products = Product.all
+    render template: '/products/index'
+    # other options to specify the template:
+    # render '/products/index.html.haml'
+    # render 'products/index.html.haml'
+    # render 'products/index.html'
+    # render 'products/index'
+    # render 'index'
+    # render :index
+    # To render a file outside the application (not recommended):
+    # render file: "/u/apps/warehouse_app/current/app/views/products/show"
   end
 
   def redirect_test
