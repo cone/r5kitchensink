@@ -95,6 +95,15 @@ class RoutesTestController < ApplicationController
     # head :ok
     # head :unauthorized
     # head :created, location: auction_path(@auction) # (201 and location header)
+
+    # - Rendering options:
+    # - content type
+    # render plain: '<b>Hello<b/>', content_type: "text/html"
+    # - layout
+    # render layout: false    # disable layout template
+    # render layout: 'login'  # a template app/views/layouts is assumed
+    # - status
+    # render text: "not found", status: 404
   end
 
   def redirect_test
