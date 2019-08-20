@@ -73,6 +73,10 @@ class RoutesTestController < ApplicationController
 
     # - Rendering HTML
     # render html: "<strong>Not Found</strong>".html_safe
+
+    # - Rendering inline template (For when the code is too small to put it in a separate template)
+    # - Whe can specify how the code will be threated (e.g. 'haml')
+    # render inline: "%span.foo #{@foo.name}", type: "haml"
   end
 
   def redirect_test
