@@ -62,6 +62,14 @@ class RoutesTestController < ApplicationController
     # render :index
     # To render a file outside the application (not recommended):
     # render file: "/u/apps/warehouse_app/current/app/views/products/show"
+
+    # - Rendering partials:
+    # render partial: 'product' # renders app/views/products/_product.html.haml
+    # render partial: 'shared/product' # renders app/views/shared/_product.html.haml
+    # - Rails infers partials (all three render app/views/products/_product):
+    # render partial: @product
+    # render @product
+    # render 'product'
   end
 
   def redirect_test
