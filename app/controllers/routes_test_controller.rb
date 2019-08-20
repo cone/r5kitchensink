@@ -70,6 +70,9 @@ class RoutesTestController < ApplicationController
     # render partial: @product
     # render @product
     # render 'product'
+
+    # - Rendering HTML
+    # render html: "<strong>Not Found</strong>".html_safe
   end
 
   def redirect_test
