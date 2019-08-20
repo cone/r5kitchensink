@@ -2,6 +2,7 @@
 class RoutesTestController < ApplicationController
   attr_accessor :dummy, :test
   layout "custom", only: [:render_test, :show] # can also be "except:"
+  add_flash_types :error
 
   def index
     render plain: 'this is route_test#index'
@@ -108,7 +109,26 @@ class RoutesTestController < ApplicationController
   end
 
   def redirect_test
-    redirect_to controller_test_render_path, notice: "redirected from redirect_test"
+    redirect_to controller_test_render_path, error: "something went wrong.."
+
+    # - More options
+    # redirect_to action: "show", id: 5
+    # redirect_to product
+    # redirect_to "http://www.rubyonrails.org"
+    # redirect_to articles_url
+    # redirect_to "/"
+
+    # - Specifying status
+    # redirect_to post_url(@post), status: :found
+    # redirect_to :atom, status: :moved_permanently
+    # redirect_to post_url(@post), status: 301
+    # redirect_to :atom, status: 302
+
+    # - Notifying params
+    # redirect_to controller_test_render_path, notice: "redirected from redirect_test"
+    # redirect_to post_url(@post), status: :found, notice: "Pay attention to the road"
+    # redirect_to post_url(@post), status: 301, flash: { updated_post_id: @post.id }
+    # redirect_to :atom, alert: "Something serious happened"
   end
 
   def helpers_test
