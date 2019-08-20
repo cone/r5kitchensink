@@ -81,6 +81,15 @@ class RoutesTestController < ApplicationController
     # - Need to disable forgery protection on this action to permit 
     # - cross-origin JavaScript embedding.
     # render js: "alert('Hello world!')"
+
+    # - Other rendering options
+    # render plain: 'Hello'
+    # render body: # doesn't specify content type
+    # render json: @record
+    # render json: @projects, include: :tasks # including relationship
+    # render json: @record, callback: 'updateRecordsDisplay' # calling a callback when using JSONP
+    # render xml: @record
+    # render xml: @projects, include: :tasks
   end
 
   def redirect_test
