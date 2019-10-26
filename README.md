@@ -65,3 +65,31 @@ Routing and resources
 [Routes for new resources example](https://github.com/cone/r5kitchensink/commit/209e639644890bcd413aab81b550e66022438d72)
 
 [Respond to a specific format and show link with an extension](https://github.com/cone/r5kitchensink/commit/410276d618d46e889715e917831e9c86dd535bcb)
+
+Controllers
+----
+
+[Example of redirecting from controller](https://github.com/cone/r5kitchensink/commit/5a0663c9cab6cac20156e4582d68d41e406f5a66)
+[More redirecting options](https://github.com/cone/r5kitchensink/commit/7efd9e45c0e4b2bad1c87e48f35197f67913e71a)
+
+[Example of rendering another template](https://github.com/cone/r5kitchensink/commit/edb2ef48a3bbab556588a6e9e8e83bdb7ef43b1a)
+
+[Example of rendering partials](https://github.com/cone/r5kitchensink/commit/8c25a0c6e697cb557828d33a95cbb4e96e580159)
+
+[Example of rendering html](https://github.com/cone/r5kitchensink/commit/2066282978dced224f4f5860381c5bf3134d0401)
+
+[Example of rendering inline template code](https://github.com/cone/r5kitchensink/commit/598a315b8807c789362c3602d2237074fe60dac5)
+
+[Example of rendering plain and using a helper](https://github.com/cone/r5kitchensink/commit/73a1ff186522e415d24553775440d846748f003b)
+
+[Example of rendering Javascript](https://github.com/cone/r5kitchensink/commit/ed1fc7c76b0d9010ab35f22c0bed272490772aca)
+
+[Example of rendering options](https://github.com/cone/r5kitchensink/commit/5d3feabdbf013d8ad9f6ed929e199adf81bb1706)
+[More rendering options](https://github.com/cone/r5kitchensink/commit/4a2e035032133a7f6eade1ea36be5330d585111a)
+
+[Example of rendering nothing](https://github.com/cone/r5kitchensink/commit/a6c5af4faed07b846f588f0583cc845ae85cd842)
+
+[Example of changing the layout](https://github.com/cone/r5kitchensink/commit/31b55d656192323be568221dc16a329410f77816)
+
+[Example of redirecting back](https://github.com/cone/r5kitchensink/commit/568d792b4750a01f33e85661d0aa6e20260a7e96)
+
