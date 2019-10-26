@@ -109,7 +109,8 @@ class RoutesTestController < ApplicationController
   end
 
   def redirect_test
-    redirect_to controller_test_render_path, error: "something went wrong.."
+    redirect_back fallback_location: root_path
+    # redirect_to controller_test_render_path, error: "something went wrong.."
 
     # - More options
     # redirect_to action: "show", id: 5
