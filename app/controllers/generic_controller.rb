@@ -5,6 +5,7 @@ class GenericController < ApplicationController
   end
   after_action R5kitchensink::TestCallback
   prepend_before_action :set_variable # executes before any of the 'before_action' callbacks
+  around_action :log_action # can also unse only:, except:, etc
 
   def callbacks_test
     render plain: "the variable set by the callback is = #{@callback_var}"
@@ -18,5 +19,15 @@ class GenericController < ApplicationController
 
   def modify_var
     @callback_var += ' MODIFIED'
+  end
+
+  def log_action
+    logger.debug "before action"
+    yield
+    logger.debug "after action"
+    # can also be a block:
+    # around_action do |controller, action|
+    #   logger.debug "before #{controller.action_name}"
+    # end
   end
 end
