@@ -7,6 +7,9 @@ class GenericController < ApplicationController
   prepend_before_action :set_variable # executes before any of the 'before_action' callbacks
   around_action :log_action # can also unse only:, except:, etc
 
+  skip_before_action :modify_var
+  skip_around_action :log_action
+
   def callbacks_test
     render plain: "the variable set by the callback is = #{@callback_var}"
   end
