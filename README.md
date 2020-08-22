@@ -85,6 +85,7 @@ Controllers
 [Example of rendering Javascript](https://github.com/cone/r5kitchensink/commit/ed1fc7c76b0d9010ab35f22c0bed272490772aca)
 
 [Example of rendering options](https://github.com/cone/r5kitchensink/commit/5d3feabdbf013d8ad9f6ed929e199adf81bb1706)
+
 [More rendering options](https://github.com/cone/r5kitchensink/commit/4a2e035032133a7f6eade1ea36be5330d585111a)
 
 [Example of rendering nothing](https://github.com/cone/r5kitchensink/commit/a6c5af4faed07b846f588f0583cc845ae85cd842)
@@ -92,4 +93,12 @@ Controllers
 [Example of changing the layout](https://github.com/cone/r5kitchensink/commit/31b55d656192323be568221dc16a329410f77816)
 
 [Example of redirecting back](https://github.com/cone/r5kitchensink/commit/568d792b4750a01f33e85661d0aa6e20260a7e96)
+
+[Example of setting callbacks on controller](https://github.com/cone/r5kitchensink/commit/29ea81072f30782c072b5805ca348080621b6601)
+
+[Example of using prepend_before_action](https://github.com/cone/r5kitchensink/commit/eac26a5d41230cc18b00178c6b84a8c0a11b150c)
+
+[Example of around_action](https://github.com/cone/r5kitchensink/commit/a3f78bc70eead83ae4a7e67076805236c74b0644)
+
+[Example of skipping cllbacks](https://github.com/cone/r5kitchensink/commit/1ebca414ea02e30516cfcfd4185e9416daeefa3a)
 
