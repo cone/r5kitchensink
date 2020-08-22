@@ -172,6 +172,9 @@ Rails.application.routes.draw do
   get 'controller-test/helpers' => 'routes_test#helpers_test'
   get 'generic/callbacks-test' => 'generic#callbacks_test'
 
+  # Streaming
+  get 'streaming/test' => 'streaming#stream'
+
   # List all routes with: 'rails routes'
   # List show routes of a specific controller with: 'rails routes -c routes_test'
 end
