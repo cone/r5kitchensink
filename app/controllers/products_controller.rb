@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    # this allows views to be rendered as they are processed
+    # the layout is rendered first, then each part of the template
+    render stream: true
   end
 
   def show
