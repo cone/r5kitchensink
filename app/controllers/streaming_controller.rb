@@ -9,4 +9,13 @@ class StreamingController < ApplicationController
   ensure
     response.stream.close
   end
+
+  def stream_file
+    # used like http://localhost:3000/products?path=/etc/hosts
+    send_file(params[:path])
+
+    # in case we need to send textual or binary data
+    # we can use send_data, example:
+    # send_data img.to_blob, disposition: 'inline', type: 'image/jpg'
+  end
 end

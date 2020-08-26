@@ -174,6 +174,7 @@ Rails.application.routes.draw do
 
   # Streaming
   get 'streaming/test' => 'streaming#stream'
+  get 'streaming/file' => 'streaming#stream_file'
 
   # List all routes with: 'rails routes'
   # List show routes of a specific controller with: 'rails routes -c routes_test'
