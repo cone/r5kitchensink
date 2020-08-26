@@ -45,6 +45,16 @@ class ProductsController < ApplicationController
     render plain: 'This is the product detail'
   end
 
+  def all_prods
+    respond_to do |format|
+      format.html do |html|
+        html.mobile do # renders something like app/views/products/all_prods.html+mobile.haml
+          @mobile_only_variable = true
+        end
+      end
+    end
+  end
+
   private
 
   def find_product
