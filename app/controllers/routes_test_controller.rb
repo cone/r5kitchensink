@@ -40,6 +40,24 @@ class RoutesTestController < ApplicationController
 
   def show_dummy
     @dummy = Dummy.find(params[:id])
+    # Dummy.find([1, 2]) also works bt it raises an exception if any
+    # of the records is not found
+
+    # other common ones:
+    # Dummy.all, Dummy.first, Dummy.last
+
+    # returns records without any order
+    # (depends on whatever order is provided by the database implementation.)
+    # Dummy.take
+    # SELECT * FROM dummies LIMIT 1
+
+    # Dummy.take(5)
+    # SELECT * FROM dummies LIMIT 5
+
+    # defaults to initializing a new instance with
+    # the provided parameters if the result set is empty:
+    # Dummy.first_or_initialize(name: 'new dummy')
+  
     dummyNew = Dummy.new do |d|
       d.name = 'dummy 2'
     end
