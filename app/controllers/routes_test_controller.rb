@@ -40,7 +40,16 @@ class RoutesTestController < ApplicationController
 
   def show_dummy
     @dummy = Dummy.find(params[:id])
-    render plain: "this is route_test#show_dummy, the dummy name is = #{dummy.name}"
+    dummyNew = Dummy.new do |d|
+      d.name = 'dummy 2'
+    end
+    # or Dummy.new(name: 'dummy2')
+    dummy_status = @dummy.new_record? ? 'new' : 'existent'
+    dummy_2status = dummyNew.persisted? ? 'existent' : 'new'
+    render plain: "this is route_test#show_dummy, \
+                   the dummy name is = #{dummy.name} \
+                   and it is #{dummy_status}. But his brother \
+                   dummy 2 is #{dummy_2status}"
   end
 
   def show_dummy_test
