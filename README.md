@@ -102,3 +102,16 @@ Controllers
 
 [Example of skipping cllbacks](https://github.com/cone/r5kitchensink/commit/1ebca414ea02e30516cfcfd4185e9416daeefa3a)
 
+
+Models
+----
+
+[Example of ActiveRecord table configurations](https://github.com/cone/r5kitchensink/commit/ccbf28716b0bb9e8538434679c1220ea1960cdd8)
+
+[Example of adding a default value for a field directly on the model](https://github.com/cone/r5kitchensink/commit/a67639a7317061881db3e3264ee8bef31ca147a2)
+
+[Examples of model instance creation](https://github.com/cone/r5kitchensink/commit/4fbc0f9f70da6b090093b3655c8de135f8ddc736)
+
+[Examples of finding records](https://github.com/cone/r5kitchensink/commit/768e745b6769979b9a27fc801a0d0bd31f818fc7)
+
+[Examples of accessing model instance attributes](https://github.com/cone/r5kitchensink/commit/ba03329614d2f461c41aebc8cb4704d792869fc9)
